@@ -66,7 +66,7 @@ class GamePlayViewController: UIViewController {
     // Starts the game timer
     func initalizeGameTimer() {
          gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GamePlayViewController.game), userInfo: nil, repeats: true)
-         gameInt = 10
+         gameInt = 15
          timeLabel.text = String(gameInt)
      }
      // Updates the game timer.
@@ -77,7 +77,7 @@ class GamePlayViewController: UIViewController {
          if gameInt == 0 {
              
              gameTimer.invalidate()
-             Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(GamePlayViewController.gameEnds), userInfo: nil, repeats: false)
+             Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GamePlayViewController.gameEnds), userInfo: nil, repeats: false)
          }
      }
      
